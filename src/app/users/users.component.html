@@ -1,0 +1,22 @@
+<div class="container">
+  
+    <table class="table table-striped">
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{user.name}}</td>
+          <td>{{user.sex}}</td>
+          <td>{{user.emailAddress}}</td>
+          <td>{{user.motto}}</td>
+          <td>
+            <button type="button" class="btn btn-info btn-sm">Chat with {{user.name}}</button>
+          </td>
+          <td>
+            <button type="button" class="btn btn-info btn-sm">Show contact</button>
+          </td>
+          <td>
+            <button type="button" class="btn btn-info btn-sm">Show profile</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+</div>
