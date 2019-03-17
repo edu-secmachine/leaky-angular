@@ -3,6 +3,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
 import {AuthenticationService} from '../authentication/authentication.service';
+import { AlertService } from '../alert/alert.service';
 
 @Component({
   selector: 'app-login',
@@ -21,7 +22,7 @@ export class LoginComponent implements OnInit {
         private route: ActivatedRoute,
         private router: Router,
         private authenticationService: AuthenticationService,
-        //private alertService: AlertService
+        private alertService: AlertService
         //TODO
     ) {
         // redirect to home if already logged in
@@ -60,7 +61,7 @@ export class LoginComponent implements OnInit {
                 },
                 error => {
                   //TODO
-                    //this.alertService.error(error);
+                    this.alertService.error("Error during login.");
                     this.loading = false;
                 });
     }

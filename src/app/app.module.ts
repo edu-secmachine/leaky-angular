@@ -11,7 +11,9 @@ import { ProfileComponent } from './profile/profile.component';
 import { HttpClientModule, HTTP_INTERCEPTORS }    from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {CookieInterceptor} from './authentication/cookie.interceptor'
+import {CookieInterceptor} from './authentication/cookie.interceptor';
+import { AlertComponent } from './alert/alert.component';
+import { RegistrationComponent } from './registration/registration.component'
 
 
 
@@ -23,7 +25,9 @@ import {CookieInterceptor} from './authentication/cookie.interceptor'
     HomeComponent,
     MessagesComponent,
     ProfileComponent,
-    LoginComponent
+    LoginComponent,
+    AlertComponent,
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,
