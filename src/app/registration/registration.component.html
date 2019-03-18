@@ -1,3 +1,35 @@
-<p>
-  registration works!
-</p>
+<div>
+  <h1>Register</h1>
+  <form action="" id="register-form">
+    <div class="form-group">
+      <label htmlFor="username">User name:</label>
+      <input required="true" type="text" class="form-control" 
+      id="email" placeholder="Enter user name" [(ngModel)]="user.name" name="name"/>
+    </div>
+    <div class="form-group">
+      <label htmlFor="password">Password:</label>
+      <input required="true" type="password" class="form-control" 
+      id="pwd" placeholder="Enter password" name="password"
+      [(ngModel)]="user.password"/>
+    </div>
+    <div class="form-group">
+      <label htmlFor="emailAddress">Mail address:</label>
+      <input type="text" class="form-control" 
+      [(ngModel)]="user.emailAddress"
+      id="emailAddress" placeholder="Enter mail address" name="emailAddress"/>
+    </div>
+    <div class="form-group">
+      <label htmlFor="motto">Motto:</label>
+      <input type="text" class="form-control" 
+      [(ngModel)]="user.motto"
+      id="motto" placeholder="Enter your motto" name="motto"/>
+    </div>
+    <div class="form-group">
+      <label htmlFor="webPageUrl">Your webpage:</label>
+      <input type="text" class="form-control" 
+      [(ngModel)]="user.webPageUrl"
+      id="webPageUrl" placeholder="Enter the address of your webpage" name="webPageUrl"/>
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="register()">Register</button>
+  </form>
+</div>
