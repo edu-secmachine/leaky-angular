@@ -13,7 +13,10 @@ import { LoginComponent } from './login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {CookieInterceptor} from './authentication/cookie.interceptor';
 import { AlertComponent } from './alert/alert.component';
-import { RegistrationComponent } from './registration/registration.component'
+import { RegistrationComponent } from './registration/registration.component';
+import { UserdetailsComponent } from './userdetails/userdetails.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import {	MatDialogModule,	MatProgressSpinnerModule} from '@angular/material';
 
 
 
@@ -27,17 +30,24 @@ import { RegistrationComponent } from './registration/registration.component'
     ProfileComponent,
     LoginComponent,
     AlertComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    UserdetailsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatDialogModule,
+    MatProgressSpinnerModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: CookieInterceptor, multi: true },
+  ],
+  entryComponents:[
+    UserdetailsComponent
   ],
   bootstrap: [AppComponent]
 })
