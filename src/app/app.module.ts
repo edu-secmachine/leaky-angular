@@ -18,6 +18,7 @@ import { UserdetailsComponent } from './userdetails/userdetails.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import {	MatDialogModule,	MatProgressSpinnerModule} from '@angular/material';
 import { MoviesComponent } from './movies/movies.component';
+import { NewmovieComponent } from './newmovie/newmovie.component';
 
 
 
@@ -33,7 +34,8 @@ import { MoviesComponent } from './movies/movies.component';
     AlertComponent,
     RegistrationComponent,
     UserdetailsComponent,
-    MoviesComponent
+    MoviesComponent,
+    NewmovieComponent
   ],
   imports: [
     BrowserModule,

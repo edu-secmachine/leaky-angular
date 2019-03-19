@@ -17,4 +17,8 @@ export class MovieService {
   getMovies(): Observable<Movie[]>{
     return this.http.get<Movie[]>(environment.baseUrl + "/rest/movie");
   }
+
+  createMovie(movie: Movie): Observable<Object>{
+      return this.http.post(environment.baseUrl + "/rest/movie", movie);
+  }
 }

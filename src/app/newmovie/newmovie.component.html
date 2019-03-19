@@ -1,0 +1,31 @@
+<div>
+    <h1>Add movie</h1>
+    <form action="" id="newmovie-form">
+      <div class="form-group">
+        <label htmlFor="title">Title:</label>
+        <input required="true" type="text" class="form-control" 
+        id="title" placeholder="Enter movie title" [(ngModel)]="movie.title" name="title"/>
+      </div>
+
+      <div class="form-group">
+          <label htmlFor="description">Description:</label>
+          <textarea class="form-control" required="true" placeholder="Add a short description of the movie"
+          id="description" [(ngModel)]="movie.description" rows="7" name="description"></textarea>
+        </div>
+
+      <div class="form-group">
+          <label htmlFor="genre">Genre:</label>
+          <input required="true" type="text" class="form-control" name="genre"
+          id="genre" placeholder="Enter movie's genre" [(ngModel)]="movie.genre"/>
+        </div>
+
+        <div class="form-group">
+            <label htmlFor="imageUrl">Image url:</label>
+            <input  type="text" class="form-control" name="imageUrl"
+            id="imageUrl" placeholder="Type a valid image url!" [(ngModel)]="movie.imageUrl"/>
+          </div>
+
+     
+      <button type="submit" class="btn btn-primary" (click)="addMovie()">Add</button>
+    </form>
+  </div>

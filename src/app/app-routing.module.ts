@@ -8,6 +8,7 @@ import {ProfileComponent} from './profile/profile.component';
 import {RegistrationComponent} from './registration/registration.component';
 import {MoviesComponent} from './movies/movies.component'
 import {AuthGuard} from './AuthGuard';
+import { NewmovieComponent } from './newmovie/newmovie.component';
 
 
 const routes: Routes = [
@@ -18,6 +19,7 @@ const routes: Routes = [
   {path: 'users', component: UsersComponent, canActivate: [AuthGuard]},
   {path: 'messages', component: MessagesComponent},
   {path: 'movies', component: MoviesComponent},
+  {path: 'newmovie', component: NewmovieComponent},
   {path: 'profile', component: ProfileComponent}
 ];
 
