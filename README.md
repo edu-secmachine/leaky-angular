@@ -24,7 +24,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 <a name="Backend"></a>
 ## Configuring a backend
-LeakyAngular uses by default a backend hosted on Google Cloud. This cloud instance is live only for limited periods. If you want to use it with your own backend, get the [javulna](https://github.com/edu-secmachine/javulna) application, run it. Than configure LeakyAngular to use your local backend by changing the baseUrl attribute in environments/environment.ts, and environments/environment.prod.ts
+LeakyAngular uses by default a backend hosted on Google Cloud. This cloud instance is live only for limited periods. If you want to use it with your own backend, get the [javulna](https://github.com/edu-secmachine/javulna) application and run it. Than configure LeakyAngular to use your local backend by changing the baseUrl attribute in environments/environment.ts, and environments/environment.prod.ts
  
 <a name="Exercises"></a>
 ## Exercises 
