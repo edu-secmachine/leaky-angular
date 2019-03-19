@@ -11,7 +11,7 @@
     1.  [Exercise 4 - Tabnabbing](#Exercise_tabnab)
 
 <a name="Introduction"></a>
-LeakyAngular is a deliberately vulnerable angular application. The project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.4. It uses the [javulna](https://github.com/edu-secmachine/javulna) backend. LeakyAngular (together with the javulna backend) is a movie-related application, where you can log in and out, read information about movies, buy movie-related objects, send messages to other users of the application, etc. The functionalities are far from complete or coherent, they just serve the purpose of demonstrating specific vulnerabilities. This document contains exercises which can be done with Javulna to understand how to exploit and how to fix specific vulnerabilities.
+LeakyAngular is a deliberately vulnerable angular application. The project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.4. It uses the [javulna](https://github.com/edu-secmachine/javulna) backend. LeakyAngular (together with the javulna backend) is a movie-related application, where you can log in and out, read information about movies, buy movie-related objects, send messages to other users of the application, etc. The functionalities are far from complete or coherent, they just serve the purpose of demonstrating specific vulnerabilities. This document contains exercises which can be done with LeakyAngular to understand how to exploit and how to fix specific vulnerabilities.
 
 <a name="Build"></a>
 ## Building, running the application
@@ -32,18 +32,19 @@ LeakyAngular uses by default a backend hosted on Google Cloud. This cloud instan
 <a name="Exercise_xss"></a>
 ### Exercise 1 – Xss
 The application is vulnerable to XSS in the Users page! Find the vulnerability, and exploit it!  
-Then check the source-code, and fix it.  
+Then check the source-code, and fix it!
 Discuss what could be the developer's reason for choosing the vulnerable solution!
 
 <a name="Exercise_injection"></a>
 ### Exercise 2 – Injection
 The application is vulnerable to a classic client-side script-injection attack. Check the movies page to find it!  
-Then check the source-code, and fix it.  
-Discuss what kind of fixes you can imagine!
+Then check the source-code, and fix it! 
+Discuss what kind of other fixes you can imagine!
 
 <a name="Exercise_csrf"></a>
 ### Exercise 3 – CSRF, OSRF
-The application is vulnerable to both CSRF and OSRF! Find the OSRF vulnerability, and exploit it! Now that you know the app's pages guess where the OSRF can be located!
+The application is vulnerable to both CSRF and OSRF! Find the OSRF vulnerability, and exploit it!   
+Now that you know the app's pages guess where the OSRF can be located!  
 How would you fix this vulnerability?
 
 <a name="Exercise_tabnab"></a>
