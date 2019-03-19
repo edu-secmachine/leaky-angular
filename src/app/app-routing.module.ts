@@ -6,6 +6,7 @@ import {HomeComponent} from './home/home.component';
 import {MessagesComponent} from './messages/messages.component';
 import {ProfileComponent} from './profile/profile.component';
 import {RegistrationComponent} from './registration/registration.component';
+import {MoviesComponent} from './movies/movies.component'
 import {AuthGuard} from './AuthGuard';
 
 
@@ -16,6 +17,7 @@ const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'users', component: UsersComponent, canActivate: [AuthGuard]},
   {path: 'messages', component: MessagesComponent},
+  {path: 'movies', component: MoviesComponent},
   {path: 'profile', component: ProfileComponent}
 ];
 

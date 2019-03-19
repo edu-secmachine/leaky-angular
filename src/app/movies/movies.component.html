@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm" *ngFor="let movie of movies">
+
+      <div class="card" style="width:300px;">
+        <img class="card-img-top" src="{{movie.imageUrl}}" alt="Card image" style="width:100%">
+        <div class="card-body">
+          <h4 class="card-title">{{movie.title}}</h4>
+          <p class="card-text">{{movie.description}}</p>
+          <span class="form-inline">
+            <a href="#" id="warn_{{movie.id}}" (click)="showMovieAfter($event)" class="card-link">
+              Warn me about this movie in
+            </a>
+            <input style="width:55px" type="text" class="form-control" 
+            [(ngModel)]="movie.warnAt">
+            <a href="#" id="warn_{{movie.id}}" (click)="showMovieAfter($event)" class="card-link">
+              sec!
+            </a>
+
+
+          </span>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

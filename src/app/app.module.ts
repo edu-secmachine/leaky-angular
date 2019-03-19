@@ -17,6 +17,7 @@ import { RegistrationComponent } from './registration/registration.component';
 import { UserdetailsComponent } from './userdetails/userdetails.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import {	MatDialogModule,	MatProgressSpinnerModule} from '@angular/material';
+import { MoviesComponent } from './movies/movies.component';
 
 
 
@@ -31,7 +32,8 @@ import {	MatDialogModule,	MatProgressSpinnerModule} from '@angular/material';
     LoginComponent,
     AlertComponent,
     RegistrationComponent,
-    UserdetailsComponent
+    UserdetailsComponent,
+    MoviesComponent
   ],
   imports: [
     BrowserModule,
