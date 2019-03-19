@@ -32,13 +32,13 @@ LeakyAngular uses by default a backend hosted on Google Cloud. This cloud instan
 <a name="Exercise_xss"></a>
 ### Exercise 1 – Xss
 The application is vulnerable to XSS in the Users page! Find the vulnerability, and exploit it!  
-Then check the source-code, and fix it!
+Then check the source-code, and fix it!  
 Discuss what could be the developer's reason for choosing the vulnerable solution!
 
 <a name="Exercise_injection"></a>
 ### Exercise 2 – Injection
 The application is vulnerable to a classic client-side script-injection attack. Check the movies page to find it!  
-Then check the source-code, and fix it! 
+Then check the source-code, and fix it!  
 Discuss what kind of other fixes you can imagine!
 
 <a name="Exercise_csrf"></a>
