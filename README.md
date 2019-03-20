@@ -43,9 +43,11 @@ Discuss what kind of other fixes you can imagine!
 
 <a name="Exercise_csrf"></a>
 ### Exercise 3 – CSRF, OSRF
-The application is vulnerable to both CSRF and OSRF! Find the OSRF vulnerability, and exploit it!   
-Now that you know the app's pages guess where the OSRF can be located!  
-How would you fix this vulnerability?
+The application is vulnerable to both CSRF and OSRF! Find the OSRF vulnerability, and exploit it!    
+To find the OSRF vulnerability, you should know, that the backend application has a password change functionality.  
+A logged in user can change her password by sending a GET request to `{{javulna_host}}/rest/user/changepwd?newpwd={{new password}}`.  
+Find where the OSRF vulnerability is.  
+Discuss how could you fix this vulnerability!
 
 <a name="Exercise_tabnab"></a>
 ### Exercise 4 – Tabnabbing
