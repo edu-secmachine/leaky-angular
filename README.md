@@ -46,7 +46,7 @@ Discuss what kind of other fixes you can imagine!
 The application is vulnerable to both CSRF and OSRF! Find the OSRF vulnerability, and exploit it!    
 To find the OSRF vulnerability, you should know, that the backend application has a password change functionality.  
 A logged in user can change her password by sending a GET request to `{{javulna_host}}/rest/user/changepwd?newpwd={{new password}}`.  
-Find where the OSRF vulnerability is.  
+Find where the OSRF vulnerability is, and exploit it!  
 Discuss how could you fix this vulnerability!
 
 <a name="Exercise_tabnab"></a>
