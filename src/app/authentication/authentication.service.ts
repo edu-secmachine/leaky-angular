@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
@@ -28,9 +28,17 @@ export class AuthenticationService {
       const formData  = new FormData();
       formData.append('username', username);
       formData.append('password', password);
-      return this.http.post<any>(`${environment.baseUrl}/login`, formData)
+      const body = new HttpParams()
+      .set('username', username)
+      .set('password', password);
+      let options = {
+        headers: new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded')
+    };
+      //formData.set()
+      return this.http.post<any>(`${environment.baseUrl}/login`, body.toString(), options)
           .pipe(map(user => {
               if (user) {
+                  console.log('aut succesffull')
                   // store user details in local storage to keep user logged in between page refreshes
                   localStorage.setItem('currentUser', JSON.stringify(user));
                   this.currentUserSubject.next(user);
