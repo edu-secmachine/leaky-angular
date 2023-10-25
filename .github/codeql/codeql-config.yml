@@ -1,0 +1,11 @@
+name: "My CodeQL config"
+
+queries: 
+  - name: Run custom queries
+    uses: ./queries
+
+paths:
+  - src 
+paths-ignore: 
+  - src/node_modules
+  - '**/*.test.js'
