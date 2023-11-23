@@ -46,7 +46,7 @@ jobs:
 
     steps:
     - name: Job 2 step
-      run:  exit 1
+      run: exit 1
     - name: Checkout repository
       uses: actions/checkout@v3
 
