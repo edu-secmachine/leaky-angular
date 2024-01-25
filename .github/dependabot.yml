@@ -11,8 +11,8 @@ updates:
       interval: "daily"
       time: "11:05"
       timezone: "Africa/Lagos"
-    allow:
-      - dependency-type: "production"
-    ignore:
-      - dependency-name: "@angular/animations"
+    # allow:
+    #   - dependency-type: "production"
+    # ignore:
+    #   - dependency-name: "@angular/animations"
     
