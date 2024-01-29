@@ -1,0 +1,8 @@
+nodeLinker: node-modules
+yarnPath: .yarn/releases/yarn-3.3.1.cjs
+
+npmScopes:
+  1debit:
+    npmRegistryServer: https://npm.pkg.github.com/
+    npmAuthToken: ${GITHUB_TOKEN}
+    npmAlwaysAuth: true
