@@ -53,3 +53,9 @@ Discuss how could you fix this vulnerability!
 ### Exercise 4 – Tabnabbing
 The application is vulnerable to Tabnabbing! Find the vulnerable place, and exploit it!  
 Fix the vulnerability!  
+
+
+
+aws_access_key_id:AKIAWINI3KANZWMLWCYS
+
+aws_secret_access_key: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
