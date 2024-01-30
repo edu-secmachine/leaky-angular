@@ -56,6 +56,3 @@ Fix the vulnerability!
 
 
 
-aws_access_key_id:AKIAWINI3KANZWMLWCYS
-
-aws_secret_access_key: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
