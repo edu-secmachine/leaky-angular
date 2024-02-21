@@ -1,4 +1,4 @@
-# Leaky Angular  project
+# A Leaky Angular  project
 
 ## Table of Contents
 1. [Introduction](#Introduction)
