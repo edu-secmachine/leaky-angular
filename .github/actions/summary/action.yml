@@ -21,7 +21,7 @@ runs:
         printf "## Step 3\nVery important value: \`${vers}\`\n\n"  >> "$GITHUB_STEP_SUMMARY"
 
    - name: Set GitHub Path
-      run: echo "$GITHUB_ACTION_PATH" >> $GITHUB_PATH
+      run: echo "Hello there"
       shell: bash
       env:
-        GITHUB_ACTION_PATH: ${{ github.action_path }}
+     
