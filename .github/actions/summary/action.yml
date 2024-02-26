@@ -21,7 +21,8 @@ runs:
         printf "## Step 3\nVery important value: \`${vers}\`\n\n"  >> "$GITHUB_STEP_SUMMARY"
 
     - name: Set GitHub Path
-      run: echo "Hello there"
+      run: |
+        printf "Hello there" >> "$GITHUB_STEP_SUMMARY"
       shell: bash
 
      
