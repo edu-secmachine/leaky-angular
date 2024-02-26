@@ -7,7 +7,7 @@ runs:
       shell: bash
 
     - name: Set GitHub Path
-       run: |
+      run: |
         printf "Hello there" >> "$GITHUB_STEP_SUMMARY"
       shell: bash
       
