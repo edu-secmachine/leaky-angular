@@ -20,8 +20,8 @@ runs:
         vers=$(bash --version)
         printf "## Step 3\nVery important value: \`${vers}\`\n\n"  >> "$GITHUB_STEP_SUMMARY"
 
-   - name: Set GitHub Path
-     run: echo "Hello there"
-     shell: bash
+    - name: Set GitHub Path
+      run: echo "Hello there"
+      shell: bash
 
      
