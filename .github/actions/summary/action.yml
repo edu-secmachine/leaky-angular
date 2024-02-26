@@ -1,6 +1,16 @@
 runs:
   using: 'composite'
   steps:
+    - name: Set GitHub Path
+      run: |
+        echo "Hello there" >> "$GITHUB_STEP_SUMMARY"
+      shell: bash
+
+    - name: Set GitHub Path
+       run: |
+        printf "Hello there" >> "$GITHUB_STEP_SUMMARY"
+      shell: bash
+      
     - name: Step 1
       id: cs-output
       shell: bash
