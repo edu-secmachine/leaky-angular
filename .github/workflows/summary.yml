@@ -34,5 +34,5 @@ jobs:
         run: |
           echo "Hello my" >> "$GITHUB_STEP_SUMMARY"
         shell: bash
-      - name: run action
-        uses: ./.github/actions/summary
+      # - name: run action
+      #   uses: ./.github/actions/summary
