@@ -1,0 +1,19 @@
+name: test multi step summary
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, toolbox-runner, dev1-cd-runner]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 5
+    steps:
+
+      - name: Checkout project
+        uses: actions/checkout@v4
+      - name: run action
+        uses: ./.github/actions/summary
