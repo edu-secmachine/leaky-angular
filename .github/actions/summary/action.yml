@@ -8,31 +8,37 @@ runs:
 
     - name: Set GitHub Path
       run: |
-        printf "Hello there" >> "$GITHUB_STEP_SUMMARY"
+        echo "Hello my" >> "$GITHUB_STEP_SUMMARY"
       shell: bash
-      
-    - name: Step 1
-      id: cs-output
-      shell: bash
-      run: |
-        vers=$(bash --version)
-        printf "## Step 1\nVery important value: \`${vers}\`\n\n"  >> "$GITHUB_STEP_SUMMARY"
 
-    - name: Step 2
-      shell: bash
-      run: |
-        vers=$(bash --version)
-        printf "## Step 2\nVery important value: \`${vers}\`\n\n"  >> "$GITHUB_STEP_SUMMARY"
-
-    - name: Step 3
-      shell: bash
-      run: |
-        vers=$(bash --version)
-        printf "## Step 3\nVery important value: \`${vers}\`\n\n"  >> "$GITHUB_STEP_SUMMARY"
 
     - name: Set GitHub Path
       run: |
-        printf "Hello there" >> "$GITHUB_STEP_SUMMARY"
+        echo "Hello you" >> "$GITHUB_STEP_SUMMARY"
       shell: bash
+      
+    # - name: Step 1
+    #   id: cs-output
+    #   shell: bash
+    #   run: |
+    #     vers=$(bash --version)
+    #     printf "## Step 1\nVery important value: \`${vers}\`\n\n"  >> "$GITHUB_STEP_SUMMARY"
+
+    # - name: Step 2
+    #   shell: bash
+    #   run: |
+    #     vers=$(bash --version)
+    #     printf "## Step 2\nVery important value: \`${vers}\`\n\n"  >> "$GITHUB_STEP_SUMMARY"
+
+    # - name: Step 3
+    #   shell: bash
+    #   run: |
+    #     vers=$(bash --version)
+    #     printf "## Step 3\nVery important value: \`${vers}\`\n\n"  >> "$GITHUB_STEP_SUMMARY"
+
+    # - name: Set GitHub Path
+    #   run: |
+    #     printf "Hello there" >> "$GITHUB_STEP_SUMMARY"
+    #   shell: bash
 
      
