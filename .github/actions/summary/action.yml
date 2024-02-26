@@ -6,7 +6,7 @@ runs:
       shell: bash
       run: |
         vers=$(bash --version)
-        printf "## Step 1\nVery important value: \`${vers}\`\n\n"  >> "$GITHUB_STEP_SUMMARY"
+        echo "## Step 1\nVery important value: \`${vers}\`\n\n"  >> "$GITHUB_STEP_SUMMARY"
 
     - name: Step 2
       shell: bash
@@ -19,3 +19,9 @@ runs:
       run: |
         vers=$(bash --version)
         printf "## Step 3\nVery important value: \`${vers}\`\n\n"  >> "$GITHUB_STEP_SUMMARY"
+
+   - name: Set GitHub Path
+      run: echo "$GITHUB_ACTION_PATH" >> $GITHUB_PATH
+      shell: bash
+      env:
+        GITHUB_ACTION_PATH: ${{ github.action_path }}
