@@ -1,0 +1,21 @@
+runs:
+  using: 'composite'
+  steps:
+    - name: Step 1
+      id: cs-output
+      shell: bash
+      run: |
+        vers=$(bash --version)
+        printf "## Step 1\nVery important value: \`${vers}\`\n\n"  >> "$GITHUB_STEP_SUMMARY"
+
+    - name: Step 2
+      shell: bash
+      run: |
+        vers=$(bash --version)
+        printf "## Step 2\nVery important value: \`${vers}\`\n\n"  >> "$GITHUB_STEP_SUMMARY"
+
+    - name: Step 3
+      shell: bash
+      run: |
+        vers=$(bash --version)
+        printf "## Step 3\nVery important value: \`${vers}\`\n\n"  >> "$GITHUB_STEP_SUMMARY"
