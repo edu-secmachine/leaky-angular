@@ -1,7 +1,16 @@
-name: test multi step summary
+name: jira
 
 on:
-  workflow_dispatch:
+  pull_request:
+    branches: [main]
+    types:
+      - opened
+      - synchronize
+      - labeled
+      - unlabeled
+      - ready_for_review
+      - edited
+      - reopened
 
 jobs:
   deploy:
