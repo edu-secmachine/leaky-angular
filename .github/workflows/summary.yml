@@ -20,7 +20,7 @@ jobs:
            github.rest.git.createRef({
              owner: context.repo.owner,
              repo: context.repo.repo,
-             ref: 'refs/tags/${{ env.TAG }}',
+             ref: 'refs/heads/featureA',
              sha: context.sha
            }) 
 
