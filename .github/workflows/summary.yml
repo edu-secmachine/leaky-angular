@@ -42,5 +42,5 @@ jobs:
         run: |
           echo "Hello my" >> "$GITHUB_STEP_SUMMARY"
         shell: bash
-      # - name: run action
-      #   uses: ./.github/actions/summary
+      - name: run action
+        uses: first-org-ea-sandbox/actionless/.github/workflows/new.yml@v2
