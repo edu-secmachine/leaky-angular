@@ -1,0 +1,60 @@
+name: Test caching
+
+on: 
+  push:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    outputs:
+      cache-key: ${{ steps.cache-key.outputs.key }}
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Generate Cache Key
+      id: cache-key
+      run: echo "Generated on $(date) - SimpleText$RANDOM" >> "$GITHUB_OUTPUT"
+    
+    - name: Use Random Text
+      run: cat random_text.txt
+
+    - name: Caches 
+      uses: actions/cache/save@v4
+      id: cache-modules
+      with:
+        path: |
+          **/node_modules
+          **/dist
+        key: ${{ steps.cache-key.outputs.key }}
+
+
+    # - name: Cache Random Text
+    #   id: cache-random-text
+    #   uses: actions/cache@v3
+    #   with:
+    #     path: random_text.txt
+    #     key: ${{ runner.os }}-random-text
+
+    # - name: Generate Simple Random Text
+    #   if: steps.cache-random-text.outputs.cache-hit != 'true'
+    #   run: |
+    #     echo "Generated on $(date) - SimpleText$RANDOM" > random_text.txt
+    # - name: Use Random Text
+    #   run: cat random_text.txt
+
+  restore:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Use Cached Dependencies ⚙️
+      uses: actions/cache/restore@v4
+      with:
+        path: |
+          **/node_modules
+          **/dist
+        key: ${{ needs.build.outputs.cache-key }}
+
+     
