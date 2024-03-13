@@ -7,6 +7,9 @@ version: 2
 updates:
   - package-ecosystem: "npm" # See documentation for possible values
     directory: "/" # Location of package manifests
+    groups:
+      development-dependencies:
+      dependency-type: "development"
     schedule:
       interval: "daily"
       time: "11:05"
