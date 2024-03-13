@@ -14,7 +14,7 @@ jobs:
 
     - name: Generate Cache Key
       id: cache-key
-      run: echo "Generated on $(date) - SimpleText$RANDOM" >> "$GITHUB_OUTPUT"
+      run: echo "key=${{Generated on $(date) - SimpleText$RANDOM}}" >> "$GITHUB_OUTPUT"
     
     - name: Use Random Text
       run: cat random_text.txt
