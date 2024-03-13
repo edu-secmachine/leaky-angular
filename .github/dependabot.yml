@@ -9,7 +9,7 @@ updates:
     directory: "/" # Location of package manifests
     groups:
       development-dependencies:
-      dependency-type: "development"
+        dependency-type: "development"
     schedule:
       interval: "daily"
       time: "11:05"
