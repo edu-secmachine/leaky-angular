@@ -1,0 +1,31 @@
+name: Test caching
+
+on: 
+  push:
+  workflow_dispatch:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - ready_for_review
+      - synchronize
+jobs:
+  build:
+    if: github.event.pull_request.draft == false
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Cache Random Text
+      id: cache-random-text
+      uses: actions/cache@v3
+      with:
+        path: random_text.txt
+        key: ${{ runner.os }}-random-text
+
+    - name: Generate Simple Random Text
+      if: steps.cache-random-text.outputs.cache-hit != 'true'
+      run: |
+        echo "Generated on $(date) - SimpleText$RANDOM" > random_text.txt
+    - name: Use Random Text
+      run: cat random_text.txt
