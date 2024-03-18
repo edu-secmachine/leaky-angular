@@ -21,4 +21,4 @@ jobs:
           
 
       - name: Push Tag
-        run: git push origin v12.5
+        run: git push --tags origin master v2.5
