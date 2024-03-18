@@ -32,8 +32,8 @@ jobs:
           git config --global user.email "oki.maureen.eloho@gmail.com"
           git config --global user.name "okimaureen"
           export GITHUB_TOKEN=${{ secrets.PAT }}
-          git tag v1.2
-          git push origin v1.2
+          git tag v1.4
+          git push origin v1.4
           
           
 
