@@ -17,9 +17,8 @@ jobs:
           git config --global user.email "oki.maureen.eloho@gmail.com"
           git config --global user.name "okimaureen"
           export GITHUB_TOKEN=${{ secrets.PAT }}
-          NEXT_VERSION=$(chronicle next-version)
-          git tag -a ${NEXT_VERSION} -m "New version ${NEXT_VERSION}"
+          
           
 
       - name: Push Tag
-        run: git push origin --tags
+        run: git push origin v12.5
