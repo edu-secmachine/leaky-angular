@@ -2,8 +2,12 @@ name: learn-github-actions-testing
 on: [push]
 jobs:
   build:
-    runs-on: macos-13-xlarge
+    runs-on: ubuntu-latest
     steps:
+      - name: Cleaning workspace
+        run: |
+          echo "Cleaning up previous run"
+          sudo rm -rf "${GITHUB_WORKSPACE}"
       - uses: actions/checkout@v4
       - name: Build
         run: echo hello 
