@@ -4,11 +4,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - name: Cleaning workspace
         run: |
           echo "Cleaning up previous run"
           sudo rm -rf "${GITHUB_WORKSPACE}"
-      - uses: actions/checkout@v4
+     
       - name: Build
         run: echo hello 
       
