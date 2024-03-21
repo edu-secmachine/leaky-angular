@@ -1,6 +1,14 @@
 name: learn-github-actions-testing
 on: [push]
 jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      ## Clean up specific directories in the workspace
+      - name: Cleaning workspace
+        run: |
+          echo "Cleaning up previous run"
+          rm -rf "${GITHUB_WORKSPACE}/path_to_directory_to_clean"
   build:
     runs-on: ubuntu-latest
     steps:
