@@ -1,11 +1,16 @@
 name: learn-github-actions-testing
-on: [push]
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
 jobs:
   cleanup:
     runs-on: ubuntu-latest
     steps:
       ## Clean up specific directories in the workspace
       - name: Cleaning workspace
+        if: github.ref == 'refs/heads/feat'
         run: |
           echo "Cleaning up previous run"
           rm -rf "${GITHUB_WORKSPACE}/path_to_directory_to_clean"
